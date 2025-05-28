@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\sufyn\\.nuget\\packages\\": {}
+    "/Users/sufyanalikhan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sufyn\\Documents\\GitHub\\CSHARPPRAC\\TurnBasedFighter\\TurnBasedFighter.csproj",
+      "projectUniqueName": "/Users/sufyanalikhan/Documents/Master_Folder/Code/SimpleTurnBasedFighter/TurnBasedFighter.csproj",
       "projectName": "TurnBasedFighter",
-      "projectPath": "C:\\Users\\sufyn\\Documents\\GitHub\\CSHARPPRAC\\TurnBasedFighter\\TurnBasedFighter.csproj",
-      "packagesPath": "C:\\Users\\sufyn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sufyn\\Documents\\GitHub\\CSHARPPRAC\\TurnBasedFighter\\obj\\",
+      "projectPath": "/Users/sufyanalikhan/Documents/Master_Folder/Code/SimpleTurnBasedFighter/TurnBasedFighter.csproj",
+      "packagesPath": "/Users/sufyanalikhan/.nuget/packages/",
+      "outputPath": "/Users/sufyanalikhan/Documents/Master_Folder/Code/SimpleTurnBasedFighter/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sufyn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/sufyanalikhan/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
