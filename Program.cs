@@ -24,6 +24,7 @@ namespace TurnBasedFighter
         }
         public void Stats()
         {
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine("Hero Stats:");
             Console.WriteLine("Name: " + Name);
             Console.WriteLine("Power: " + Power);
@@ -31,10 +32,12 @@ namespace TurnBasedFighter
         }
         public void Attack(Hero target, int damage)
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"\n{Name} attacks with {Power} and deals {damage} damage! ");
         }
         public void TakeDamage(int damage)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Health -= damage;
             Console.WriteLine($"\n{Name} has taken {damage} damage and has {Health} health left");
         }
@@ -52,8 +55,10 @@ namespace TurnBasedFighter
             Hero hero1 = new Hero("Superman", "Flight", 100);
             Hero hero2 = new Hero("Batman", "Intellect", 100);
             Hero hero3 = new Hero("Flash", "Dash", 100);
-            Hero playerhero = null;
-            Hero enemyHero = null;
+            Hero hero4 = new Hero("Spiderman", "Web-Shot", 100);
+
+            Hero? playerhero = null;
+            Hero? enemyHero = null;
 
             //Player Chooser
             bool chosen = true;
@@ -64,6 +69,7 @@ namespace TurnBasedFighter
                 Console.WriteLine($"{hero1.Name} 1.");
                 Console.WriteLine($"{hero2.Name} 2.");
                 Console.WriteLine($"{hero3.Name} 3.");
+                Console.WriteLine($"{hero4.Name} 4.");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
@@ -82,11 +88,17 @@ namespace TurnBasedFighter
                         playerhero = hero3;
                         chosen = false;
                         break;
+                    case 4:
+                        Console.WriteLine("You are Spiderman");
+                        playerhero = hero4;
+                        chosen = false;
+                        break;
                     default:
-                        Console.WriteLine("You must choose from 1-3");
+                        Console.WriteLine("You must choose from 1-4");
                         break;
                 }
             }
+
             bool enemyChosen = true;
             while (enemyChosen)
             {
@@ -94,6 +106,8 @@ namespace TurnBasedFighter
                 if (playerhero != hero1) Console.WriteLine($"{hero1.Name} 1.");
                 if (playerhero != hero2) Console.WriteLine($"{hero2.Name} 2.");
                 if (playerhero != hero3) Console.WriteLine($"{hero3.Name} 3.");
+                if (playerhero != hero4) Console.WriteLine($"{hero4.Name} 4.");
+
                 int enenemyChoice = int.Parse(Console.ReadLine());
                 switch (enenemyChoice)
                 {
@@ -133,8 +147,20 @@ namespace TurnBasedFighter
                             enemyChosen = false;
                         }
                         break;
+                    case 4:
+                        if (playerhero == hero4)
+                        {
+                            Console.WriteLine("You can't fight yourself. Pick someone else");
+                        }
+                        else
+                        {
+                            enemyHero = hero4;
+                            Console.WriteLine("You will fight Spiderman!");
+                            enemyChosen = false;
+                        }
+                        break;
                     default:
-                        Console.WriteLine("Choose a valid enemy from 1 to 3.");
+                        Console.WriteLine("Choose a valid enemy from 1 to 4.");
                         break;
                 }
             }
