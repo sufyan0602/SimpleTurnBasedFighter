@@ -35,5 +35,3 @@ After finishing a fight, you're prompted to **play again** or quit the game.
 2. Open with **Visual Studio** or **VS Code**
 3. Build and run!
 
-```bash
-git clone https://github.com/your-username/SimpleTurnBasedFighter.git
